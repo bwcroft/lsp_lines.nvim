@@ -23,7 +23,7 @@ Using lazy.nvim (this should probably be registered _after_ `lspconfig`):
 
 ```lua
 return {
-  "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+  "https://github.com/bwcroft/lsp_lines.nvim",
   config = function()
     require("lsp_lines").setup()
     
