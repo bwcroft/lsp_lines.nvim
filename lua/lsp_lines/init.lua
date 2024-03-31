@@ -7,17 +7,10 @@ local highlight_groups = {
   [vim.diagnostic.severity.HINT] = "DiagnosticVirtualTextHint",
 }
 
--- These don't get copied, do they? We only pass around and compare pointers, right?
 local SPACE = "space"
 local DIAGNOSTIC = "diagnostic"
 local OVERLAP = "overlap"
 local BLANK = "blank"
-
--- Deprecated. Use `setup()` instead.
-M.register_lsp_virtual_lines = function()
-  print("lsp_lines.register_lsp_virtual_lines() is deprecated. use lsp_lines.setup() instead.")
-  M.setup()
-end
 
 local function column_to_cell(bufnr, lnum, col)
   local lines = vim.api.nvim_buf_get_lines(bufnr, lnum, lnum + 1, false)
